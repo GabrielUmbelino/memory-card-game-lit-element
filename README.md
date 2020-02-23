@@ -6,7 +6,7 @@
 ```
 npm install -g polymer-cli
 git clone https://github.com/GabrielUmbelino/memory-card-game-lit-element
-cd start-lit-element
+cd memory-card-game-lit-element
 npm install
 polymer serve
 ```
