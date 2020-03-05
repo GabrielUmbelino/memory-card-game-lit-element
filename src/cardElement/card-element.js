@@ -61,6 +61,7 @@ export class CardElement extends LitElement {
   }
 
   render() {
+    
     return html`
       <div 
         class="card ${this.flipped ? 'flipped' : ''} ${this.disabled ? 'disabled' : ''}" 
@@ -69,8 +70,7 @@ export class CardElement extends LitElement {
         <figure class="front">
           <h2></h2>
         </figure>
-        <figure class="back">
-        </figure>
+        <figure class="back"></figure>
       </div>
     `;
   }

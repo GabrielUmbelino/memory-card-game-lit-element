@@ -59,7 +59,7 @@ export class MemoryCardGame extends LitElement {
   }
 
   render() {
-    const elements = (face, index) => {
+    const elements = this.cards.map((face, index) => {
       return html`
          <card-element
             face="${face.face}"
@@ -68,7 +68,7 @@ export class MemoryCardGame extends LitElement {
             @flipped="${(e) => this.flipHandler(e, index)}">
          </card-element>
        `
-    };
+    });
 
     const start = html`
       <div class="start-container">
@@ -87,7 +87,7 @@ export class MemoryCardGame extends LitElement {
     return html`
       ${!this.started ? start : null}
       <section class="container">
-        ${this.cards.map(elements)}
+        ${elements}
       </section>
       <section class="container">
         ${this.clicks || this.score ? score : null}
