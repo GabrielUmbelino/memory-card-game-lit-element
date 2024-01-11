@@ -5,12 +5,16 @@
   "repository": "https://github.com/PolymerLabs/start-lit-element.git",
   "main": "start-lit-element.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "es-dev-server --app-index index.html --node-resolve --watch --open"
   },
   "author": "Gabriel Umbelino",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "@webcomponents/webcomponentsjs": "latest",
-    "lit-element": "latest"
+    "@webcomponents/webcomponentsjs": "2.4.1",
+    "lit-element": "2.2.1"
+  },
+  "devDependencies": {
+    "es-dev-server": "^2.1.0"
   }
 }
