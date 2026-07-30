@@ -1,0 +1,76 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  padding: var(--space-lg);
+  background-color: rgba(10, 10, 10, 0.82);
+  backdrop-filter: blur(6px);
+  animation: fade 0.35s ease-out;
+}
+
+.card {
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  box-shadow: 0 0 80px rgba(124, 58, 237, 0.35);
+}
+
+.score {
+  font-size: 64px;
+  line-height: 1;
+  letter-spacing: -1.8px;
+  color: var(--sunset-soft);
+  text-shadow: 0 0 40px rgba(255, 122, 23, 0.5);
+}
+
+.summary {
+  font-size: 14px;
+  color: var(--body);
+}
+
+.form {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  padding: var(--space-md) var(--space-lg);
+  background-color: var(--canvas-soft);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px;
+}
+
+.input::placeholder {
+  color: var(--mute);
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--hairline);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

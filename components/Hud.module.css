@@ -1,0 +1,40 @@
+.hud {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  padding: var(--space-lg) var(--space-xl);
+  background-color: rgba(25, 25, 25, 0.7);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-sm);
+  backdrop-filter: blur(8px);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  min-width: 0;
+}
+
+.stat dt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.value {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.highlight {
+  color: var(--sunset-soft);
+  text-shadow: 0 0 18px rgba(255, 194, 133, 0.45);
+}
+
+@media (min-width: 768px) {
+  .value {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
